@@ -19,7 +19,7 @@
   max-width: max-content;
 }
 
-.botao a:hover {
+.botao:hover {
   background: linear-gradient(#ffb60d, #e59417);
 }
 
@@ -29,6 +29,25 @@
 }
 .botao.secundario:hover {
   background-color: var(--cor-9);
+}
+
+.botao.seta {
+  display: flex;
+  align-items: center;
+}
+
+.botao.seta::after {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 10px;
+  margin-left: 12px;
+  background: url("../../img/icones/seta.svg");
+  transition: 0.2s;
+}
+
+.botao.seta:hover::after {
+  transform: translateX(4px);
 }
 
 @media (max-width: 600px) {
@@ -64,7 +83,7 @@
   background-color: var(--cor-11);
 }
 
-.titulo p{
+.titulo p {
   margin-bottom: 4px;
 }
 
@@ -74,7 +93,7 @@
     padding-bottom: 40px;
   }
 
-  .titulo p{
+  .titulo p {
     font-size: 1rem;
     text-transform: lowercase;
     font-weight: 400;
